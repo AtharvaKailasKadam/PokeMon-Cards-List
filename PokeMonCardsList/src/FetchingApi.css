@@ -1,0 +1,142 @@
+/* General styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+.Container {
+    padding: 2rem;
+    text-align: center;
+}
+
+.Container h1 {
+    font-size: 2.5rem;
+    color: #3a5da8;
+    text-shadow: 1px 1px 2px #ccc;
+}
+
+.Card-demo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0;
+    list-style: none;
+}
+
+/* Pokemon Card styles */
+.Pokemon-card {
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px;
+    width: 300px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden; /* To contain pseudo-elements */
+}
+
+.Pokemon-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0) 70%);
+    transition: transform 0.5s ease;
+    transform: scale(0);
+    z-index: 1;
+}
+
+.Pokemon-card:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.Pokemon-card:hover::before {
+    transform: scale(1);
+}
+
+.Pokemon-card figure {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    z-index: 2;
+}
+
+.Pokemon-Image {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+    filter: drop-shadow(0 5px 10px rgba(0,0,0,0.2));
+    transition: transform 0.3s ease;
+}
+
+.Pokemon-card:hover .Pokemon-Image {
+    transform: scale(1.2);
+    filter: drop-shadow(0 10px 20px rgba(0,0,0,0.2));
+}
+
+.Pokemon-Image
+{
+    transition: transform 0.3s ease;
+}
+
+.Pokemon-Image:hover {
+    transform: scale(1.2);
+    filter: drop-shadow(0 10px 20px rgba(0,0,0,0.2));
+}
+
+.Pokemon-card figcaption {
+    font-size: 1.5rem;
+    margin: 1rem 0 0;
+    color: #333;
+    text-transform: capitalize;
+    position: relative;
+    z-index: 2;
+}
+
+.Pokemon-card figcaption {
+    font-size: 1.5rem;
+    margin: 1rem 0 0;
+    color: #333;
+    text-transform: capitalize;
+    position: relative;
+    z-index: 2;
+}
+
+.Pokemon-card h2 {
+    font-size: 1.5rem;
+    margin: 1rem 0;
+    color: #333;
+    text-transform: uppercase;
+    position: relative;
+    z-index: 2;
+}
+
+.grid-three-cols {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-top: 1.5rem;
+    padding: 0 1rem;
+    position: relative;
+    z-index: 2;
+}
+
+.grid-three-cols p {
+    margin: 0;
+    font-size: 0.8rem;
+    color: #666;
+}
+
+.grid-three-cols span {
+    display: block;
+    font-weight: bold;
+    font-size: 1rem;
+    color: #333;
+    margin-top: 0.25rem;
+}

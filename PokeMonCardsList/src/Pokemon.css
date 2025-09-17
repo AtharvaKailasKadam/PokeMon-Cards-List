@@ -41,7 +41,7 @@
 }
 
 .Card-Item:hover img {
-    transform: scale(1.2);
+    transform: scale(1.35);
     filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.2));
 }
 
@@ -166,5 +166,56 @@
     perspective: 1000px;
     margin-top: 1rem;
 
+}
+
+.Error {
+    text-align: center;
+    font-size: 2rem;
+    margin-top: 5rem;
+    color: #666;
+}
+
+.Pokemon-Details {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Use a 2-column grid */
+    gap: 0.5rem;
+    margin-top: 1rem;
+    padding: 0.75rem;
+    background-color: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-radius: 10px;
+}
+
+.Pokemon-Info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.04);
+    padding: 0.5rem;
+    border-radius: 8px;
+    font-size: 0.75rem;
+    color: #444;
+    text-transform: capitalize;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.Pokemon-Info:hover {
+    transform: scale(1.05);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.Pokemon-Info span {
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: #333;
+    margin-top: 2px;
+}
+
+.Image-Container-Border:hover {
+    transform: scale(1.1) rotateY(10deg) rotateX(5  deg);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+    animation-play-state: paused;
 }
 

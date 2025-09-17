@@ -1,4 +1,6 @@
 import "./Pokemon.css"
+import React from "react";
+import Pokeball from "./assets/Pokeball.jpeg"
 import { PokemonCard } from "./PokemonCard.jsx";
 import { useEffect, useState } from "react";
 
@@ -48,13 +50,15 @@ export const Pokemon = () =>
     if(error)
     {
         return <h1 className="Error">{error.message}</h1>
-        
     }
     return(
         <section className = "Container">
-            <header className="Header">
-                <h1>Pokemon Cards</h1>
-            </header>
+            <div className="Title-Container">
+                <img src={Pokeball} alt="Pokeball" className="Pokeball"/>
+                <header className="Header">
+                    <h1>Pokemon Cards</h1>
+                </header>
+            </div>
             <div className="Card-Container">
                 <ul className="Card-List">
                     {PokemonData.map((curPokemon) =>

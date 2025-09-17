@@ -1,0 +1,170 @@
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.Card-Item {
+    list-style: none;
+    padding: 1rem;
+    border-radius: 15px;
+    background-color: #f0f0f0;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    animation: float 3s ease-in-out infinite;
+    position: relative;
+    perspective: 1000px;
+}
+
+.Card-Item:hover {
+    transform: scale(1.1) rotateY(10deg) rotateX(5deg);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+    animation-play-state: paused;
+}
+
+.Card-Item figure {
+    margin: 0;
+}
+
+.Card-Item img {
+    max-width: 100%;
+    height: auto;
+    filter: drop-shadow(0 5px 10px rgba(0, 0, 0, 0.2));
+    transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.Card-Item:hover img {
+    transform: scale(1.2);
+    filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.2));
+}
+
+.Card-Item figcaption {
+    margin-top: 1rem;
+}
+
+.Card-Item h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #333;
+    text-transform: capitalize;
+    transition: color 0.3s ease;
+}
+
+.Card-Item:hover h2 {
+    color: #007bff;
+}
+
+.Container {
+    padding: 2rem;
+    text-align: center;
+}
+
+.Header h1 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    color: #333;
+}
+
+.Card-Container {
+    display: flex;
+    justify-content: center;
+}
+
+.Card-List {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.Loading,
+.Error {
+    text-align: center;
+    font-size: 2rem;
+    margin-top: 5rem;
+    color: #666;
+}
+
+.Pokemon-Info {
+    font-size: 0.9rem;
+    color: #555;
+    margin: 0.5rem 0;
+    text-align: left;
+    text-transform: capitalize;
+}
+
+.Pokemon-Type {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.Pokemon-Type p {
+    margin: 0;
+    padding: 0.25rem 0.75rem;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    color: white;
+    text-transform: capitalize;
+    font-weight: bold;
+}
+
+.type-grass { background-color: #00ff26; }
+.type-fire { background-color: #ff6a00; }
+.type-water { background-color: #004cff; }
+.type-bug { background-color: #A8B820; }
+.type-normal { background-color: #dcdc1a; }
+.type-poison { background-color: #A040A0; }
+.type-electric { background-color: #F8D030; }
+.type-ground { background-color: #E0C068; }
+.type-fairy { background-color: #EE99AC; }
+.type-fighting { background-color: #C03028; }
+.type-psychic { background-color: #F85888; }
+.type-rock { background-color: #B8A038; }
+.type-ghost { background-color: #705898; }
+.type-ice { background-color: #98D8D8; }
+.type-dragon { background-color: #7038F8; }
+.type-dark { background-color: #705848; }
+.type-steel { background-color: #B8B8D0; }
+.type-flying { background-color: #A890F0; }
+
+
+.Container {
+    padding: 2rem;
+    text-align: center;
+}
+
+.Error {
+    text-align: center;
+    font-size: 2rem;
+    margin-top: 5rem;
+    color: #666;
+}
+
+
+
+.Image-Container-Border
+{
+    border: #333 2px solid;
+    border-radius: 15px;
+    padding: 0.5rem;
+    background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    perspective: 1000px;
+    margin-top: 1rem;
+
+}
+

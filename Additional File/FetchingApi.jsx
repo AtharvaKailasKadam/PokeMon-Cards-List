@@ -9,15 +9,20 @@ export const FetchingApi = () => {
 
     const API = "https://pokeapi.co/api/v2/pokemon/pikachu"
 
-    const fetchPokemon=() =>
+    const fetchPokemon = async() =>
     {
-        fetch(API)
-        .then((res)=> res.json())
-        .then((data) => {
+        try
+        {
+            const res = await fetch(API);
+            const data = await res.json();
             setPokemon(data);
             setLoading(false);
-        })
-        .catch((error) => {console.log(error);setError(error); setLoading(false)});
+        } catch (error)
+        {
+            console.log(error);
+            setError(error);
+            setLoading(false);
+        }
     }
     useEffect(()=>{
         fetchPokemon();

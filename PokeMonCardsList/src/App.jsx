@@ -1,9 +1,10 @@
-import { FetchingApi } from './FetchingApi'
+import { Pokemon } from "./Pokemon.jsx";
+
 
 export default function App() {
   return(
     <>
-      <FetchingApi />
+      <Pokemon />
     </>
   )
 }

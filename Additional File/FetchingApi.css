@@ -139,3 +139,25 @@ body {
     color: #333;
     margin-top: 0.25rem;
 }
+
+.Card-Item:hover h2 {
+    color: #007bff;
+}
+
+.Pokemon-Details {
+    margin-top: 1rem;
+    padding: 0 1rem;
+}
+
+.Pokemon-Info {
+    font-size: 0.9rem;
+    color: #555;
+    margin: 0.5rem 0;
+    text-align: left;
+    text-transform: capitalize;
+}
+
+.Container {
+    padding: 2rem;
+    text-align: center;
+}

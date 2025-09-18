@@ -6,11 +6,12 @@ import { useEffect, useState } from "react";
 
 export const Pokemon = () =>
 {
-    const API = "https://pokeapi.co/api/v2/pokemon?limit=200";
+    const API = "https://pokeapi.co/api/v2/pokemon?limit=500";
 
     const [PokemonData, setPokemonData] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState("");
+    const [search, setSearch] = useState("")
 
     const fetchPokemon = async () =>
     {
@@ -43,6 +44,8 @@ export const Pokemon = () =>
 
     },[]);
 
+    const searchData = PokemonData.filter((curPokemon) => curPokemon.name.toLowerCase().includes(search.toLowerCase()));
+
     if(loading)
     {
         return <h1 className="Loading">Loading...</h1>
@@ -54,14 +57,17 @@ export const Pokemon = () =>
     return(
         <section className = "Container">
             <div className="Title-Container">
-                <img src={Pokeball} alt="Pokeball" className="Pokeball"/>
+                <img src={Pokeball} alt="Pokeball" className="Pokeball" />
                 <header className="Header">
                     <h1>Pokemon Cards</h1>
                 </header>
+                <div className="Search-Bar">
+                    <input type="text" placeholder="Search Pokemon" value={search} onChange={(e)=> setSearch(e.target.value)}/>
+                </div>
             </div>
             <div className="Card-Container">
                 <ul className="Card-List">
-                    {PokemonData.map((curPokemon) =>
+                    {searchData.map((curPokemon) =>
                     {
                         return <PokemonCard key={curPokemon.id} PokemonData={curPokemon} />;
                     })}

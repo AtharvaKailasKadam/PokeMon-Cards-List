@@ -233,6 +233,7 @@
     gap: 1rem;
     margin-bottom: 2rem;
     position: relative;
+    flex-wrap: wrap;
 }
 
 .Pokeball {
@@ -253,6 +254,29 @@
 .Title-Container:hover .Header {
     transform: translateX(-80px);
 }
+
+.Search-Bar {
+    flex-basis: 100%;
+    margin-top: 0.5rem;
+}
+
+.Search-Bar input {
+    width: 100%;
+    max-width: 300px;
+    padding: 0.75rem 1rem;
+    border-radius: 25px;
+    border: 2px solid #ddd;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.Search-Bar input:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 4px 10px rgba(0, 123, 255, 0.2);
+}
+
 
 .Container {
     padding: 2rem;

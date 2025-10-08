@@ -76,3 +76,6 @@ export const Pokemon = () =>
         </section>
     );
 }
+
+// PokemonCard.jsx
+// All Done..!
